@@ -6,9 +6,7 @@ const theCounter = (acc, theSpecie) => ({...acc, [theSpecie.name]: theSpecie.res
 const countAnimals = (animal) => {
   if (!animal) { return species.reduce(theCounter, {}); }
   const specie = specieName(animal.specie);
-  const residents = animal.sex
-    ? specie.residents.filter((resident) => resident.sex === animal.sex)
-    : specie.residents;
+  const residents = animal.sex ? specie.residents.filter((resident) => resident.sex === animal.sex) : specie.residents;
   return residents.length;
 }
 
